@@ -22,13 +22,27 @@ The first showcase will be a minimal ePI dosage example:
 
 Install the docs dependencies with `pip install -r requirements.txt`, then build the docs from `docs/source/`.
 
-Optional virtual environment:
+### Optional virtual environment
+
+Create and activate a Python virtual environment (recommended):
 
 ```powershell
+# Create the venv (one time)
 python -m venv .venv
+
+# Activate it
 .\.venv\Scripts\Activate.ps1
+
+# Install dependencies
 pip install -r requirements.txt
+
+# When done, deactivate with
+deactivate
 ```
+
+The `.venv` folder is excluded from git (see `.gitignore`).
+
+### Building and viewing
 
 Run `docs/open.ps1` to rebuild the docs and open the generated `index.html` in your browser.
 
