@@ -26,6 +26,7 @@ Install the docs dependencies with `pip install -r requirements.txt`, then build
 
 Create and activate a Python virtual environment (recommended):
 
+**Windows (PowerShell):**
 ```powershell
 # Create the venv (one time)
 python -m venv .venv
@@ -40,19 +41,43 @@ pip install -r requirements.txt
 deactivate
 ```
 
+**Linux / macOS:**
+```bash
+# Create the venv (one time)
+python -m venv .venv
+
+# Activate it
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# When done, deactivate with
+deactivate
+```
+
 The `.venv` folder is excluded from git (see `.gitignore`).
 
 ### Building and viewing
 
-Run `docs/open.ps1` to rebuild the docs and open the generated `index.html` in your browser.
+**Windows (PowerShell):**
 
-Run `docs/open.ps1 -Clean` if you want a full rebuild before the browser opens.
+- `docs/open.ps1` – rebuild the docs and open `index.html` in your browser
+- `docs/open.ps1 -Clean` – full rebuild before opening
+- `docs/build.ps1` – build Sphinx site to `docs/_build/html`
+- `docs/build.ps1 -Clean` – full Sphinx rebuild and clear output first
 
-Run `docs/build.ps1` to build the Sphinx site into `docs/_build/html`.
+**Linux / macOS (Bash):**
 
-Run `docs/build.ps1 -Clean` to force a full Sphinx rebuild and clear the HTML output first.
+- `bash docs/open.sh` – rebuild the docs and open `index.html` in your browser
+- `bash docs/open.sh --clean` – full rebuild before opening
+- `bash docs/build.sh` – build Sphinx site to `docs/_build/html`
+- `bash docs/build.sh --clean` – full Sphinx rebuild and clear output first
 
-Run `scripts/validation/check-epi-proof.ps1` to verify the FSH source and JSON evidence still match.
+**Validation (cross-platform):**
+
+Run `scripts/validation/check-epi-proof.ps1` (Windows) to verify the FSH source and JSON evidence still match.
+For Linux/macOS, the validation logic can be implemented in bash if needed.
 
 The FSH source is currently kept as a static reference and may become a build step in a future iteration.
 
