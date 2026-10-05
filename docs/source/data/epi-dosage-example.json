@@ -1,0 +1,36 @@
+{
+  "resourceType": "Composition",
+  "id": "epi-dosage-example-1",
+  "meta": {
+    "tag": [
+      {
+        "system": "urn:traceability:need",
+        "code": "REQ-EPI-001",
+        "display": "example medicine dosage requirement"
+      },
+      {
+        "system": "urn:traceability:need",
+        "code": "REQ-EPI-002",
+        "display": "example medicine dosage FSH source requirement"
+      }
+    ]
+  },
+  "status": "final",
+  "type": {
+    "text": "Example medicine package leaflet"
+  },
+  "date": "2026-10-05",
+  "title": "Example medicine package leaflet - Dosage and administration",
+  "section": [
+    {
+      "title": "4.2 Dosage and administration",
+      "code": {
+        "text": "Section 4.2"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Dosage:</strong> Adults take 1 tablet twice daily after meals.</p><p><strong>How to take:</strong> Swallow with water and take at regular intervals.</p><p><strong>Maximum daily dose:</strong> Do not exceed 2 tablets per day unless prescribed.</p></div>"
+      }
+    }
+  ]
+}
